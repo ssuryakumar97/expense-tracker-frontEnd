@@ -1,0 +1,31 @@
+.topbar-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 10px; */
+    background-color: #1c1c84;
+    color: white;
+}
+
+
+.left-container{
+    margin:10px;
+}
+.right-container{
+    /* width: 30%; */
+    margin: 10px;
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: end;
+    gap: 20px;
+    
+}
+
+/* .topbar-dashboard, .topbar-income, .topbar-expenses{
+    margin: 5px;
+} */
+
+.topbar-dashboard:hover, .topbar-income:hover, .topbar-expenses:hover{
+    color: gray;
+    cursor: pointer;
+}

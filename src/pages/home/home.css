@@ -1,0 +1,8 @@
+.cards{
+    display: flex;
+}
+.graph-container{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 300px;
+}

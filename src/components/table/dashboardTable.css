@@ -1,0 +1,62 @@
+.dashboard-table{
+    margin: 20px;
+}
+.transaction{
+    display: flex;
+    justify-content: space-between;
+}
+.myTransactions{
+    font-size: large;
+    font-weight:bold;
+}
+.sort-div{
+    display: flex;
+}
+.sort, .export-div{
+    padding: 5px 10px;
+    border: solid 1px gray;
+}
+.export-div{
+    color: blue;
+    cursor: pointer;
+}
+.search-container{
+    width: 100%;
+    height: 30px;
+    margin: 20px 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.search-left-div{
+    width: 70%;
+    height: 30px;
+    /* margin: 20px 20px; */
+    border: solid black 1px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.search-input{
+    /* padding: 10px; */
+    width: 100%;
+    /* height: 100%; */
+    border: none;
+}
+
+.search-input:focus{
+    outline: none;
+}
+.search-right-div{
+    width: 30%;
+    height: 30px;
+    /* margin: 20px 20px; */
+    border: solid black 1px;
+}
+
+.search-right-div select{
+    width: 100%;
+    height: 30px;
+    /* margin: 20px 20px; */
+}
+

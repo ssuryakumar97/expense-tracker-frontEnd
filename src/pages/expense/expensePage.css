@@ -1,0 +1,39 @@
+.expense-form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    row-gap: 5px;
+    margin: 10px;
+}
+
+.expense-form input{
+    height: 20px;
+}
+
+.expense-form select{
+    height: 30px;
+}
+
+.category-span input{
+    vertical-align:text-bottom;
+}
+
+.expense-button{
+    background-color: blue;
+    margin-top: 10px;
+    height: 30px;
+    width: 50%;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.disable-button{
+    background-color: rgb(107, 107, 246);
+    margin-top: 10px;
+    height: 30px;
+    width: 50%;
+    color: white;
+    border-radius: 5px;
+    cursor: not-allowed;
+}

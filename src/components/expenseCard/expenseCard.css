@@ -1,0 +1,17 @@
+.expense-card{
+    width: 33%;
+    height: 70px;
+    margin: 20px;
+    padding: 10px;
+    border: solid gray 1px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.expense-font, .expense-amount{
+    margin-left: 10px;
+}
