@@ -19,21 +19,6 @@ const PrivateRoute = ({isAuthenticated}) => {
 }
 
 function App() {
-
-  // onAuthStateChanged(auth, (user) => {
-  //   if (user) {
-  //     // User is signed in, see docs for a list of available properties
-  //     // https://firebase.google.com/docs/reference/js/auth.user
-  //     const uid = user.uid;
-  //     console.log(user)
-  //     console.log(uid)
-  //     // ...
-  //   } else {
-  //     // User is signed out
-  //     // ...
-  //   }
-  
-  // })
   
   const [user, setUser] = useState({})
   useEffect(() => {
@@ -41,8 +26,6 @@ function App() {
       setUser(currentUser)
     })
   },[])
-
-  console.log(user)
 
   return (
     
@@ -58,8 +41,6 @@ function App() {
           <Route path='/register' element={<Register/>} />
         </Routes>
       </BrowserRouter>
-     {/* <Home/> */}
-     {/* <ExpensePage/> */}
     </>
   )
 }

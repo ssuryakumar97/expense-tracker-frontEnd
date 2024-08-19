@@ -28,9 +28,7 @@ const ExpensePage = () => {
   })
 },[])
 
-  console.log(user)
   const handleChange = (e) => {
-    console.log(e.target.value)
     if(e.target.name == "amount") {
       const obj = {[e.target.name]: +e.target.value}
       setExpenseData((prev) => ({...prev, ...obj}))

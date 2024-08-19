@@ -22,7 +22,6 @@ const Home = () => {
       try {
         const q = query(collection(db, `users/${user.uid}/transactions`))
         const querySnapshot = await getDocs(q) 
-        console.log(querySnapshot)
         const transactionArray =[]
         querySnapshot.forEach((doc) => {
           // console.log(doc.id)
@@ -40,7 +39,6 @@ const Home = () => {
     return acc = acc+val.amount
   },0)
 
-  console.log(totalExpenses)
   return (
     <div>
         <Topbar/>

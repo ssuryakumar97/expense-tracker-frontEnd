@@ -48,7 +48,6 @@ onAuthStateChanged(auth, (user) => {
       createUserWithEmailAndPassword(auth, userData.email, userData.password).then((userCredential) => {
         // Signed up 
         const user = userCredential.user;
-        console.log(user)
         createUserDoc(user)
         toast.success("User created!!")
         // navigate("/")
@@ -66,7 +65,6 @@ onAuthStateChanged(auth, (user) => {
 
     const createUserDoc = async(user) => {
       if(!user) return;
-      console.log(user.uid)
       const userRef = doc(db, "users", user.uid)
       const usersData = await getDoc(userRef)
       if(!usersData.exists()){
@@ -89,8 +87,6 @@ onAuthStateChanged(auth, (user) => {
         toast.error("Doc already exists")
       }
     } 
-
-    console.log(userData)
   }
   return (
     <div className='main-register-container'>

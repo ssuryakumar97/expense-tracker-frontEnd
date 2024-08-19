@@ -13,7 +13,6 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { auth, db  } from '../../firebase';
 import { collection, getDocs, query, doc, deleteDoc } from 'firebase/firestore';
 import SearchIcon from '@mui/icons-material/Search';
-import { toast } from 'react-toastify';
 import { unparse } from 'papaparse';
 
 
@@ -27,7 +26,6 @@ const DashboardTable = () => {
   const [transactions, setTransactions] = useState([])
   const [searchFilter, setSearchFilter] = useState("")
   const [categoryFilter, setCategoryFilter] = useState("")
-  const [sort, setSort] =useState("")
   const [noSort, setNoSort] =useState(true)
   const [sortByDate, setSortByDate] =useState(false)
   const [sortByAmount, setSortByAmount] =useState(false)
@@ -42,7 +40,6 @@ const DashboardTable = () => {
       try {
         const q = query(collection(db, `users/${user.uid}/transactions`))
         const querySnapshot = await getDocs(q) 
-        console.log(querySnapshot)
         const transactionArray =[]
         querySnapshot.forEach((doc) => {
           // console.log(doc.id)
@@ -94,9 +91,6 @@ const DashboardTable = () => {
   })
 
   const handleDelete = async(e) => {
-    console.log(e.id, user.uid)
-    // const query =  doc(db, `/users/${user.uid}/transactions/${e.id}`)
-    // const query =  doc(db, "/users/VPXmj9gYdqXtFOfSimYw8QGnJYc2/transactions/aKWx4HoAZlk37uwUuzHF")
     const query =  doc(db, "users",user.uid, "transactions",e.id)
     const deleted = await deleteDoc(query)
     window.location.reload()
@@ -117,9 +111,6 @@ const DashboardTable = () => {
     document.body.removeChild(link)
   }
 
-  console.log(transactions)
-  console.log(filteredTransactions)
-  console.log(sortedTransactions)
   return (
     <div className='dashboard-table'>
       <div className='search-container'>
